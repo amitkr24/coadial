@@ -48,7 +48,6 @@ module.exports.create_session = function(req,res){
     console.log(req.body);
         if(err){ console.log('error in finding user in signing in'); return res.redirect('back');}
         if(user.password!=req.body.password){
-        console.log('case3');
             return res.redirect('back');
         }else {
             res.cookie('user_id', user.id);

@@ -5,7 +5,6 @@ const expressLayout   = require('express-ejs-layouts');
 const db              = require('./config/mongoose');
 const cookieParser    = require('cookie-parser');
 
-
 app.use(expressLayout);
 app.use(express.urlencoded());
 // use route express
@@ -16,7 +15,6 @@ app.use('/',require('./routes'));
 // set up view engine
 app.set('view engine','ejs');
 app.set('views','./views');
-
 
 app.listen(port,function(err){
     if(err){
