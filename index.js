@@ -5,10 +5,12 @@ const expressLayout   = require('express-ejs-layouts');
 const db              = require('./config/mongoose');
 const cookieParser    = require('cookie-parser');
 
-app.use(expressLayout);
+
 app.use(express.urlencoded());
 // use route express
 app.use(express.static('assets'));
+app.use(expressLayout);
+//app.set('layout extractStyles', true);
 app.use(cookieParser());
 app.use('/',require('./routes'));
 
